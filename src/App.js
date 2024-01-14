@@ -7,7 +7,7 @@ function App() {
 
   const getData = async () => {
     const response = await axios.get(
-      "http://getting-env.eba-mhzhmyb7.ap-south-1.elasticbeanstalk.com/getData"
+      "http://getting-env.eba-mhzhmyb7.ap-south-1.elasticbeanstalk.com/"
     );
     setData(response.data);
   };
