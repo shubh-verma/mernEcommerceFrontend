@@ -1,16 +1,20 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState, useEffect } from "react";
 import "./App.css";
+import axios from "axios";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Hello from Shubham Verma</h1>
-      </header>
-    </div>
-  );
+  const [data, setData] = useState("");
+
+  const getData = async () => {
+    const response = await axios.get(
+      "http://getting-env.eba-mhzhmyb7.ap-south-1.elasticbeanstalk.com/getData"
+    );
+    setData(response.data);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
+  return <div>{data}</div>;
 }
 
 export default App;
