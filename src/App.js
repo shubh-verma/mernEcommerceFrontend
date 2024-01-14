@@ -14,7 +14,12 @@ function App() {
   useEffect(() => {
     getData();
   }, []);
-  return <div>{data}</div>;
+  return (
+    <div>
+      <h1>Hello from frontend</h1>
+      <div>{data}</div>
+    </div>
+  );
 }
 
 export default App;
