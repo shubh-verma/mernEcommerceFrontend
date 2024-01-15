@@ -5,9 +5,7 @@ function App() {
   const [data, setData] = useState("");
 
   const getData = async () => {
-    const response = await axios.get(
-      "http://getting-env.eba-mhzhmyb7.ap-south-1.elasticbeanstalk.com/"
-    );
+    const response = await axios.get("http://api.shubhamverma.xyz/");
     setData(response.data);
   };
   useEffect(() => {
