@@ -5,7 +5,7 @@ function App() {
   const [data, setData] = useState("");
 
   const getData = async () => {
-    const response = await axios.get("http://api.shubhamverma.xyz/");
+    const response = await axios.get("http://api.shubhamverma.xyz/getData");
     setData(response.data);
   };
   useEffect(() => {
